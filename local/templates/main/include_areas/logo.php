@@ -1,0 +1,1 @@
+<img src="<?=SITE_TEMPLATE_PATH;?>/images/logo2.png" width="150" height="120" alt="">
