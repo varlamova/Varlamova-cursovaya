@@ -91,7 +91,7 @@ nav {background:url(images/nav.png) 0 0 repeat;  width:1024px; margin:3px auto 0
 .subpages-nav nav {background:transparent !important; padding-top:59px; margin-top:0 !important; }
 h1 {display:inline-block; z-index:100; position:absolute; top:0; left:425px; z-index:1000;}
 
-ul.menu {display:inline-block;display:block; padding:46px 0 70px 21px;  }
+ul.menu {display:inline-block;display:block; padding:150px 0 40px 21px;  }
 ul.menu li {float:left; display:inline-block; line-height:24px; background:url(images/li.png) 0 0 no-repeat; padding:0 34px 0 43px; }
 ul.menu li.li-none {background:transparent;}
 ul.menu li.li-left {margin-left:200px;}

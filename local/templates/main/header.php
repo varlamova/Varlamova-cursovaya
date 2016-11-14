@@ -89,18 +89,26 @@ Loc::loadMessages(__FILE__);?>
 <!--==============================header=================================-->
 <div class="header">
     <div>
-        <div class="nav">
-            <nav>
-                <ul class="menu">
-                    <li class="current li-none"><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li class="li-left li-none"><a href="services.html">Services</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
-                </ul>
-            </nav>
-        </div>
+        <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"top_menu", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "2",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "left",
+		"USE_EXT" => "Y",
+		"COMPONENT_TEMPLATE" => "top_menu"
+	),
+	false
+);?><br>
+
         <header>
             <h1><a href="index.html">
                     <?if(!CSite::InDir('/')):?><a href="/"><?endif;?>
