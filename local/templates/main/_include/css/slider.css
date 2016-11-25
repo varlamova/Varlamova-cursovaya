@@ -9,7 +9,7 @@
 .pagination>li>a, .pagination>li>span {
     position: relative;
     float: left;
-    
+
     margin-left: -1px;
     line-height: 1.42857143;
     color: #DEB887;
