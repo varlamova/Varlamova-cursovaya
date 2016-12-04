@@ -89,7 +89,13 @@ class KPIManager {
                 'UF_PERIOD' => new
                 \Bitrix\Main\Type\DateTime($period. ' 00:00:00')
             );
-            $result = KPIEmployeeTable::add($arValue);
+            $oldKPI = self::GetKPEmployeeValue($KPI, $idEmployee, $period)[0];
+            if (isset($oldKPI["ID"])) {
+                $result = KPIEmployeeTable::update($oldKPI["ID"], $arValue);
+            } else {
+                $result = KPIEmployeeTable::add($arValue);
+            }
+            //$result = KPIEmployeeTable::add($arValue);
             if (!$result->isSuccess()) {
                 $db->rollbackTransaction();
                 return false;
